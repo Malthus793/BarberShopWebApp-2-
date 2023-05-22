@@ -36,9 +36,9 @@ public class UpdateStatusServlet extends HttpServlet {
         book.setStatus(status);
         
         bfl.edit(book);
-        
-        RequestDispatcher disp = request.getRequestDispatcher("update_status_outcome.jsp");
-        disp.forward(request, response);
+//        
+//        RequestDispatcher disp = request.getRequestDispatcher("update_status_outcome.jsp");
+//        disp.forward(request, response);
     }
 
     

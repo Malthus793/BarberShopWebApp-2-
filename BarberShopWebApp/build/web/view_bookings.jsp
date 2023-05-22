@@ -137,7 +137,7 @@
                                                 </select>
                                             </div>
                                             <div class="mb-1">
-                                                <input type="hidden" name="booking_id" value="<%=booking.getId()%>">
+                                                <input type="hidden" name="id" value="<%=booking.getId()%>">
                                                 <input type="submit" class="btn  btn-sm  btn-primary" value="update status">
                                             </div>
                                         </form>
