@@ -40,6 +40,10 @@
         <servlet-name>DeleteBookingsServlet</servlet-name>
         <servlet-class>za.ac.tut.web.DeleteBookingsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewCustomerByGender</servlet-name>
+        <servlet-class>za.ac.tut.web.ViewCustomerByGender</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserLoginServlet</servlet-name>
         <url-pattern>/UserLoginServlet.do</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>DeleteBookingsServlet</servlet-name>
         <url-pattern>/DeleteBookingsServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewCustomerByGender</servlet-name>
+        <url-pattern>/ViewCustomerByGender.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

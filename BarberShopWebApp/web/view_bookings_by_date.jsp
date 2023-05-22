@@ -112,16 +112,10 @@
                                         <td>Pending</td>
                                         <td><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#updateDetails">Edit</button></td>
                                     </tr>
-                                     <%
-                                        }
-                                    %>
-                                </tbody>
-                            </table>
-                        </div>
-                                
-
+                                     <tr>
+                                        
                         <!-- Modal -->
-                        <div class="modal fade " id="updateDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade " id="updateDetails<%=booking.getId()%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -132,15 +126,15 @@
 
 
                                         <form>
-                                            <p>Record ID : </p>
+                                            <p>Booking ID : <%=booking.getId()%></p>
 
 
                                             <div class="mb-1">
                                                 <label for="age" class="form-label">Status : </label>
                                                 <select class="form-select" aria-label="" >
                                                     <option selected>Select Status</option>
-                                                    <option value="male">Pending</option>
-                                                    <option value="female">Done</option>
+                                                    <option value="Confirmed">Confirm</option>
+                                                    <option value="Done">Done</option>
                                                 </select>
                                             </div>
                                             <div class="mb-1">
@@ -150,8 +144,9 @@
 
                                         <br>
 
-                                        <form>
+                                        <form action="DeleteBookingsServlet.do" method="POST">
                                             <div class="mb-1">
+                                                <input type="hidden" name="booking_id" value="<%=booking.getId()%>">
                                                 <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                                             </div>
                                         </form>
@@ -164,7 +159,17 @@
                                 </div>
                             </div>
                         </div>
+                        
+                                    </tr>
+                                     <%
+                                        }
+                                    %>
+                                </tbody>
+                            </table>
+                        </div>
+                                
 
+                        
                     </section>
                 </div>
                 <!-- JAVASCRIPT FILES -->

@@ -77,6 +77,9 @@ https://templatemo.com/tm-585-barber-shop
                             <a href="ViewAllCustomersServlet.do" class="btn btn-secondary mb-4">View All Customers</a>  <br>
                          
                             <a href="age_range.jsp" class="btn btn-secondary mb-4">View Customers of specific age</a>  <br>
+                            
+                            <a href="gender_selection.jsp" class="btn btn-secondary mb-4">View Customers By Gender</a>  <br>
+                            
                         </div>
 
 

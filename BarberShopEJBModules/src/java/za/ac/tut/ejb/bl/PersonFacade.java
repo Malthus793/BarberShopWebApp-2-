@@ -42,9 +42,17 @@ public class PersonFacade extends AbstractFacade<Person> implements PersonFacade
 
     @Override
     public List<Person> ageRange(Integer minAge, Integer maxAge) {
-       Query query = em.createQuery("SELECT p FROM Person p WHERE p.age BETWEEN :minAge AND :maxAge");
+        Query query = em.createQuery("SELECT p FROM Person p WHERE p.age BETWEEN :minAge AND :maxAge");
         query.setParameter("minAge", minAge); 
         query.setParameter("maxAge", maxAge); 
+        List<Person> people = (List<Person>) query.getResultList();
+        return people;
+    }
+
+    @Override
+    public List<Person> findCustomerByGender(String gender) {
+        Query query = em.createQuery("SELECT p FROM Person p WHERE p.gender = :gender ORDER BY p.age");
+        query.setParameter("gender", gender); 
         List<Person> people = (List<Person>) query.getResultList();
         return people;
     }

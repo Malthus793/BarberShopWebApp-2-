@@ -34,4 +34,6 @@ public interface PersonFacadeLocal {
 
     int count();
     
+    List<Person> findCustomerByGender(String gender);
+    
 }

@@ -44,7 +44,7 @@
 
     <body>
         <%
-            List<Person> customers = (List<Person>) request.getAttribute("customers");
+            List<Person> customers = (List<Person>) request.getAttribute("findCustomerByGender");
         %>
         <div class="container-fluid">
             <div class="row">
