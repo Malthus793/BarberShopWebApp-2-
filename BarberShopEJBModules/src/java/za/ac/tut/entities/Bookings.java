@@ -34,7 +34,7 @@ public class Bookings implements Serializable {
     private Integer numPeople;
     private String branch;
     private String style;
-    private String comment;
+    private String status;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date creationDate;
     @ManyToOne(fetch=FetchType.LAZY)
@@ -44,7 +44,7 @@ public class Bookings implements Serializable {
     public Bookings() {
     }
 
-    public Bookings(Long id, String name, String contacts, Time time, Date date, Integer numPeople, String branch, String style, String comment, Date creationDate, Person person) {
+    public Bookings(Long id, String name, String contacts, Time time, Date date, Integer numPeople, String branch, String style, String status, Date creationDate, Person person) {
         this.id = id;
         this.name = name;
         this.contacts = contacts;
@@ -53,17 +53,17 @@ public class Bookings implements Serializable {
         this.numPeople = numPeople;
         this.branch = branch;
         this.style = style;
-        this.comment = comment;
+        this.status = status;
         this.creationDate = creationDate;
         this.person = person;
     }
 
-    public String getComment() {
-        return comment;
+    public String getStatus() {
+        return status;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     
