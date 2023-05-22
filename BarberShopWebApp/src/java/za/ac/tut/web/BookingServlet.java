@@ -65,7 +65,7 @@ public class BookingServlet extends HttpServlet {
                 
                 System.out.println( fDate + " " + fTime);
                 
-                Bookings book = createBookings(style,finalTime,name,phone,branch,comment,numPeople,fDate,person);
+                Bookings book = createBookings(style,finalTime,name,phone,branch,numPeople,fDate,person);
                 
                 bfl.create(book);
                 
@@ -83,7 +83,7 @@ public class BookingServlet extends HttpServlet {
         
     }
 
-    private Bookings createBookings(String style, Time finalTime, String name, String phone, String branch, String comment, Integer numPeople, Date fDate, Person person) {
+     private Bookings createBookings(String style, Time finalTime, String name, String phone, String branch, Integer numPeople, Date fDate, Person person) {
        Bookings book = new Bookings();
                 book.setPerson(person);
                 book.setContacts(phone);
@@ -92,10 +92,9 @@ public class BookingServlet extends HttpServlet {
                 book.setDate(fDate);
                 book.setBranch(branch);
                 book.setStyle(style);
-                book.setComment(comment);
+                book.setStatus("Pending");
                 book.setTime(finalTime);
                 book.setCreationDate(new Date());
-                
                 return book;
     }
 
