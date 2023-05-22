@@ -7,7 +7,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import za.ac.tut.entities.Person;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-05-22T10:47:24")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2023-05-22T10:55:49")
 @StaticMetamodel(Bookings.class)
 public class Bookings_ { 
 
@@ -16,11 +16,11 @@ public class Bookings_ {
     public static volatile SingularAttribute<Bookings, String> name;
     public static volatile SingularAttribute<Bookings, Integer> numPeople;
     public static volatile SingularAttribute<Bookings, String> style;
-    public static volatile SingularAttribute<Bookings, String> comment;
     public static volatile SingularAttribute<Bookings, Long> id;
     public static volatile SingularAttribute<Bookings, Time> time;
     public static volatile SingularAttribute<Bookings, Date> creationDate;
     public static volatile SingularAttribute<Bookings, String> branch;
     public static volatile SingularAttribute<Bookings, String> contacts;
+    public static volatile SingularAttribute<Bookings, String> status;
 
 }

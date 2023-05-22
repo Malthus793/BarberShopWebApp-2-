@@ -261,7 +261,7 @@ https://templatemo.com/tm-585-barber-shop
                                             </div>
                                         </div>
                                         
-                                          <div class="col-lg-6 col-12">
+                                          <div class="">
                                                 <select class="form-select form-control" name="style" id="bb-branch" aria-label="Default select example">
                                                     <option selected="">Select Hair Style</option>
                                                     <option value="Mohwack">Mohawk</option>
@@ -278,8 +278,6 @@ https://templatemo.com/tm-585-barber-shop
                                                 </select>
 
                                             </div>
-
-                                        <textarea name="message" value="No Comment" rows="3" class="form-control" id="bb-message" placeholder="Comment (Optionals)"></textarea>
 
                                         <div class="col-lg-4 col-md-10 col-8 mx-auto">
                                             <button type="submit" class="form-control">Submit</button>
