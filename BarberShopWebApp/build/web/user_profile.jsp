@@ -4,6 +4,10 @@
     Author     : Jakaza G Chauke
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.List"%>
+<%@page import="za.ac.tut.entities.Bookings"%>
+<%@page import="za.ac.tut.entities.Person"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -40,6 +44,13 @@ https://templatemo.com/tm-585-barber-shop
     </head>
     
     <body>
+        
+        
+        <%
+        
+           Person person = (Person)session.getAttribute("person");
+            List<Bookings> bookings = (List<Bookings>) request.getAttribute("bookings");
+        %>
 
         <div class="container-fluid">
             <div class="row">
@@ -65,30 +76,90 @@ https://templatemo.com/tm-585-barber-shop
                     <section class=" d-flex justify-content-center align-items-center" id="section_1">
 
                         <div class="container ">
+                            <a href="bookings_page.jsp" class="btn btn-success mt-3">Home page</a>
                             <p class="pt-5">Profile</p>
                             <table>
                                 <tr>
-                                    <th>ID : </th>
-                                    <th>1010</th>
-                                </tr>
-                                <tr>
                                     <th>Name : </th>
-                                    <th>Themba</th>
+                                    <th><%= person.getFirstname()%></th>
                                 </tr>
                                 
                                 <tr>
-                                    <th>ID : </th>
-                                    <th>1010</th>
+                                    <th>Surname : </th>
+                                    <th><%= person.getSurname()%></th>
                                 </tr>
-                                <tr>
-                                    <th>Name : </th>
-                                    <th>Themba</th>
+                           <tr>
+                                    <th>Email : </th>
+                                    <th><%= person.getEmail()%></th>
+                                </tr>
+                                                                                        <tr>
+                                    <th>Gender : </th>
+                                    <th><%= person.getGender()%></th>
                                 </tr>
                                 
+                                                           <tr>
+                                    <th>Age : </th>
+                                    <th><%= person.getAge()%></th>
+                                </tr>
                             </table>
-                      
-                        </div>
+                                
+                               <%if(bookings.size() > 0){%>
+                                
+                                <p class="pt-5">List Of All Your Bookings</p>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Contact</th>
+                                        <th scope="col">Branches</th>
+                                        <th scope="col">Style</th>
+                                        <th scope="col"># People</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
+                                    <%
+                                         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                                         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+                                        for (int i = 0; i < bookings.size(); i++) {
+                                            Bookings booking = bookings.get(i);
+                                            String date = dateFormat.format(booking.getDate());
+                                            String time = timeFormat.format(booking.getTime());
+                                    %>
+                                    <tr>
+                                        <th scope="row"><%=(i+1)%></th>
+                                        <td><%=booking.getName()%></td>
+                                        <td><%=booking.getContacts()%></td>
+                                        <td><%=booking.getBranch()%></td>
+                                        <td><%=booking.getStyle()%></td>
+                                        <td><%=booking.getNumPeople()%></td>
+                                        <td><%=date%></td>
+                                        <td><%=time%></td>
+                                        <td><%=booking.getStatus()%></td>
+                                       
+                                    </tr>
+       
+                                     <%
+                                        }
+                                    %>
+                                </tbody>
+                            </table>
+                                
+                                <%
+                                    }else{
+                                %>
+                                
+                                 <p class="pt-5">There are no bookings for the current profile. click the button below to book.</p>
+                                 
+                                 <a class="btn btn-primary" href="bookings_page.jsp">Book Now</a>
+                                 
+                                 <%}%>
+                                
+                        </div>
 
      
                     </section>

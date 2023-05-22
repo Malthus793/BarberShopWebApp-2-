@@ -110,7 +110,7 @@
                                         <td><%=date%></td>
                                         <td><%=time%></td>
                                         <td><%=booking.getStatus()%></td>
-                                        <td><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#updateDetails">Edit</button></td>
+                                        <td><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#updateDetails<%=booking.getId()%>">Edit</button></td>
                                     </tr>
                                      <tr>
                                         

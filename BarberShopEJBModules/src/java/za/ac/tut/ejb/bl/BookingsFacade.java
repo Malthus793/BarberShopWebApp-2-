@@ -48,6 +48,16 @@ public class BookingsFacade extends AbstractFacade<Bookings> implements Bookings
         List<Bookings> bookings = (List<Bookings>) query.getResultList();
         return bookings;
     }
+    
+    
+        @Override
+        public List<Bookings> findByPerson(Person person) {
+        Query query = em.createQuery("SELECT b FROM Bookings b WHERE b.person = :person");
+        query.setParameter("person", person);
+        List<Bookings> bookings = (List<Bookings>) query.getResultList();
+        return bookings;
+    }
+
 
     @Override
     public void deleteAll(Person person) {

@@ -38,16 +38,32 @@ public class UserLoginServlet extends HttpServlet {
         // Check if email and password matches with entered values.
         // save user to session
         // Go to main page
-        Person person = personFL.find(email);
         
-        String pEmail = person.getEmail();
-        String pPassword = person.getPassword();
-        
-        if(email.equals(pEmail) && password.equals(pPassword)){
-            response.sendRedirect("bookings_page.jsp");
-            session.setAttribute("person", person);
+        if(email.equals("") || password.equals("")){
+            
+                response.sendRedirect("user_login.jsp?error=true");
+            
         }else{
-            response.sendRedirect("user_login.jsp?error=true");
+        
+            Person person = personFL.find(email);
+
+            String pEmail = person.getEmail();
+            String pPassword = person.getPassword();
+
+            if(email.equals(pEmail) && password.equals(pPassword)){
+                response.sendRedirect("bookings_page.jsp");
+                session.setAttribute("person", person);
+            }else{
+                response.sendRedirect("user_login.jsp?error=true");
+            }  
+            
+        
+        
         }
+        
+        
+        
+        
+
     }
 }

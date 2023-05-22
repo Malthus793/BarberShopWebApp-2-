@@ -49,6 +49,10 @@ public class BookingServlet extends HttpServlet {
             String style = request.getParameter("style");
             Integer numPeople = Integer.parseInt(request.getParameter("number"));
             
+            if(phone.length() != 10){
+                throw new PhoneLengthException("Please phone must be 10");
+            }
+            
         try {
             
             

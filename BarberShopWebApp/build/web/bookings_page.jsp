@@ -67,9 +67,7 @@ https://templatemo.com/tm-585-barber-shop
                         </a>
 
                         <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Profile</a>
-                            </li>
+
 
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_2">Our Story</a>
@@ -82,9 +80,13 @@ https://templatemo.com/tm-585-barber-shop
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_4">Price List</a>
                             </li>
+                            
+                                                        <li class="nav-item">
+                                <a class="nav-link " href="GetCurrentUserServlet.do">Profile</a>
+                            </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="UserLogoutServlet.do">Log-out</a>
+                                <a class="nav-link " href="UserLogoutServlet.do">Log-out</a>
                             </li>
                         </ul>
                     </div>
@@ -234,11 +236,11 @@ https://templatemo.com/tm-585-barber-shop
                                             </div>
 
                                             <div class="col-lg-6 col-12">
-                                                <input type="tel" class="form-control" max="10" minlength="10" min="10" maxlength="10" name="phone" placeholder="Mobile 071-177-0422"  required>
+                                                <input type="number" class="form-control"  minlength="10"  maxlength="10" name="phone" placeholder="Mobile 071-177-0422"  required>
                                             </div>
                                         
                                             <div class="col-lg-6 col-12">
-                                                <input class="form-control" type="time" name="time" value="18:30" />
+                                                <input class="form-control" type="time" name="time" value="08:30" />
                                             </div>
 
                                             <div class="col-lg-6 col-12">

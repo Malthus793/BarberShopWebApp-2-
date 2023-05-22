@@ -58,7 +58,7 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Page Not Found </a>
+                                <a class="nav-link click-scroll" href="#section_1">Page Not Found 404 </a>
                             </li>
 
                         </ul>
@@ -71,7 +71,7 @@
                             
                             <p class="pt-5 text-danger">Page Not Found</p>
                             
-                            <p class="pt-5 muted small">The you trying to access does not exist. </p>
+                            <p class="pt-5 muted small">The page you trying to access does not exist. </p>
                              
                             <a href="bookings_page.jsp" class="btn btn-success mt-3">Home page</a>
                         </div>

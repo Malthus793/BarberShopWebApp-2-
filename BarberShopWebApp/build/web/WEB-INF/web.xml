@@ -48,6 +48,10 @@
         <servlet-name>ViewCustomerByGender</servlet-name>
         <servlet-class>za.ac.tut.web.ViewCustomerByGender</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetCurrentUserServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.GetCurrentUserServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserLoginServlet</servlet-name>
         <url-pattern>/UserLoginServlet.do</url-pattern>
@@ -96,6 +100,10 @@
         <servlet-name>UpdateStatusServlet</servlet-name>
         <url-pattern>/UpdateStatusServlet.do</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCurrentUserServlet</servlet-name>
+        <url-pattern>/GetCurrentUserServlet.do</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -104,5 +112,17 @@
     <error-page>
         <exception-type>java.lang.NumberFormatException</exception-type>
         <location>/inavlid_input_error_handler.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/page_not_found.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>za.ac.tut.web.PhoneLengthException</exception-type>
+        <location>/phone_error_page.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.ejb.EJBException</exception-type>
+        <location>/invalid_user_page.jsp</location>
     </error-page>
 </web-app>

@@ -75,15 +75,10 @@ https://templatemo.com/tm-585-barber-shop
                                 <h3 class="pb-5">Login Into Your Account</h3>
                                 
                                     <% if (error != null && error.equals("true")) { %>
-                                    <script>
+                             
                                         
-                                        alert('Invalid username or password. Please try again.');
-                                         // Display the SweetAlert error message
-//                                        Swal.fire({
-//                                            text: 'Invalid username or password. Please try again.',
-//                                            confirmButtonText: 'Ok'
-//                                        })
-                                    </script>
+                                        <p class="pt-5 text-danger small">Invalid username or password. Please try again. </p>
+
                                     <% } %>
                                 
                                 

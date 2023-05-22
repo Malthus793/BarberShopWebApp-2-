@@ -36,6 +36,8 @@ public interface BookingsFacadeLocal {
     
     void deleteAll(Person person);
     
+    List<Bookings> findByPerson(Person person);
+    
     void UpdateStatus(Long id,String status);
     
     List<Bookings> bookingsByDate(Date date); 
