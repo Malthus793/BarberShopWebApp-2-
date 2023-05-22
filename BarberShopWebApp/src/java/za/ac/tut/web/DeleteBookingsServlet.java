@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import za.ac.tut.ejb.bl.BookingsFacadeLocal;
 import za.ac.tut.entities.Bookings;
-import static za.ac.tut.entities.Bookings_.id;
+
 
 /**
  *
