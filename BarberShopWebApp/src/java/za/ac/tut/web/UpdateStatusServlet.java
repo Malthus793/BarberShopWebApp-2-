@@ -31,14 +31,11 @@ public class UpdateStatusServlet extends HttpServlet {
         String status = request.getParameter("status");
         Long id = Long.parseLong(request.getParameter("id"));
         
-        Bookings book = new Bookings();
-        book.setId(id);
-        book.setStatus(status);
+        bfl.UpdateStatus(id, status);
         
-        bfl.edit(book);
-//        
-//        RequestDispatcher disp = request.getRequestDispatcher("update_status_outcome.jsp");
-//        disp.forward(request, response);
+        
+        RequestDispatcher disp = request.getRequestDispatcher("update_status_outcome.jsp");
+        disp.forward(request, response);
     }
 
     

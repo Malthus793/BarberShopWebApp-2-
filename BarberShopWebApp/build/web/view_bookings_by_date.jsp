@@ -109,7 +109,7 @@
                                         <td><%=booking.getNumPeople()%></td>
                                         <td><%=date%></td>
                                         <td><%=time%></td>
-                                        <td>Pending</td>
+                                        <td><%=booking.getStatus()%></td>
                                         <td><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#updateDetails">Edit</button></td>
                                     </tr>
                                      <tr>
@@ -125,19 +125,20 @@
                                     <div class="modal-body">
 
 
-                                        <form>
+                                        <form action="UpdateStatusServlet.do" method="POST">
                                             <p>Booking ID : <%=booking.getId()%></p>
 
 
                                             <div class="mb-1">
                                                 <label for="age" class="form-label">Status : </label>
-                                                <select class="form-select" aria-label="" >
+                                                <select name="status" class="form-select" aria-label="" >
                                                     <option selected>Select Status</option>
                                                     <option value="Confirmed">Confirm</option>
                                                     <option value="Done">Done</option>
                                                 </select>
                                             </div>
                                             <div class="mb-1">
+                                                <input type="hidden" name="id" value="<%=booking.getId()%>">
                                                 <input type="submit" class="btn  btn-sm  btn-primary" value="update status">
                                             </div>
                                         </form>

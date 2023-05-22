@@ -234,7 +234,7 @@ https://templatemo.com/tm-585-barber-shop
                                             </div>
 
                                             <div class="col-lg-6 col-12">
-                                                <input type="tel" class="form-control" name="phone" placeholder="Mobile 071-177-0422"  required>
+                                                <input type="tel" class="form-control" max="10" minlength="10" min="10" maxlength="10" name="phone" placeholder="Mobile 071-177-0422"  required>
                                             </div>
                                         
                                             <div class="col-lg-6 col-12">

@@ -54,5 +54,13 @@ public class BookingsFacade extends AbstractFacade<Bookings> implements Bookings
         Query query = em.createQuery("DELETE FROM Bookings b WHERE b.person = :person");
         query.executeUpdate();
     }
+
+    @Override
+    public void UpdateStatus(Long id,String status) {
+        Query query = em.createQuery("UPDATE Bookings b SET b.status = :status WHERE b.id = :id");
+        query.setParameter("id", id);
+        query.setParameter("status", status);
+        query.executeUpdate();
+    }
     
 }

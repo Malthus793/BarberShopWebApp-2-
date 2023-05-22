@@ -88,7 +88,7 @@ https://templatemo.com/tm-585-barber-shop
                                       </div>
                                       <div class="mb-3">
                                         <label for="email" class="form-label">Email : </label>
-                                        <input name="email" type="text" class="form-control" id="email" placeholder="Email">
+                                        <input name="email" type="email" class="form-control" id="email" required="" placeholder="Email">
                                       </div>
                                       <div class="mb-3">
                                         <label for="age" class="form-label">Age : </label>
